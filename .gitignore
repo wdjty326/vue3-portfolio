@@ -1,0 +1,6 @@
+node_modules
+dist
+
+
+src/Pages/**/*.d.ts
+package-lock.json

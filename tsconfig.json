@@ -47,6 +47,8 @@
 		"baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
 		"paths": {
 			"@/*": ["./*"],
+			"@Components/*": ["./Components/*"],
+			"@Libs/*": ["./Libs/*"],
 			"@Pages/*": ["./Pages/*"],
 			"@Templates/*": ["./Templates/*"],
 			"@Themes/*": ["./Themes/*"],

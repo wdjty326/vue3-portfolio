@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"serve": "webpack serve --config webpack.config.js --mode=development",
+    "serve": "webpack serve --config webpack.config.js --mode=development",
     "build": "webpack --config webpack.config.js --mode=development"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.8.0",
-    "vue": "^3.0.4"
+    "reflect-metadata": "^0.1.13",
+    "vue": "^3.0.4",
+    "vue-class-component": "^8.0.0-rc.1"
   },
   "devDependencies": {
     "@types/core-js": "^2.5.4",

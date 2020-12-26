@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+	"serve": "webpack serve --config webpack.config.js --mode=development",
+    "build": "webpack --config webpack.config.js --mode=development"
   },
   "author": "",
   "license": "ISC",
@@ -15,14 +16,19 @@
   "devDependencies": {
     "@types/core-js": "^2.5.4",
     "@vue/compiler-sfc": "^3.0.4",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.3",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
     "ts-loader": "^8.0.11",
     "typescript": "^4.1.2",
     "vue-loader": "^16.1.1",
     "vue-style-loader": "^4.1.2",
     "webpack": "^5.10.0",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }

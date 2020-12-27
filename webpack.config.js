@@ -10,6 +10,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const publicPath = "/";
 
+
+
 const pages = (() => {
 	const result = {};
 	const match = glob.sync(path.resolve(__dirname, "src", "Pages", "**/*"));
@@ -72,15 +74,18 @@ module.exports = (env, option) => {
 						MiniCssExtractPlugin.loader,
 						{
 							loader: "css-loader",
-							options: { modules: true }
+							options: { modules: false }
 						},
 						{
 							loader: "sass-loader",
 							options: {
-								additionalData: "$env: " + option.mode + ";\n @import \"@/Themes/_main.scss\";",
+								additionalData: "$env: " + option.mode + ";\n$AssetRoot: \"\/static\/\";\n @import \"@/Themes/_main.scss\";",
 							},
 						},
 					],
+				}, {
+					test: /\.jpg$|\.ttf$/,
+					loader: "file-loader"
 				}
 			]
 		},
@@ -100,7 +105,7 @@ module.exports = (env, option) => {
 			new VueLoaderPlugin(),
 			new MiniCssExtractPlugin({
 				filename: "css/[name].css",
-				ignoreOrder: false
+				ignoreOrder: false,
 			}),
 		]
 			.concat(htmlPages),

@@ -2,10 +2,24 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: "AppleGothic";
+	src: url($AssetRoot + "/applegothic.ttf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+
+	font-family: "AppleGothic", sans-serif;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
 }

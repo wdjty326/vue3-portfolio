@@ -1,14 +1,16 @@
 <template>
-  <div class="notion">notion page</div>
+  <div class="notion">
+	  Notion Page
+  </div>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { Vue, Options } from "vue-class-component";
 
-export default defineComponent({
-  name: "Notion",
-  components: {},
-  setup(prop) {},
-});
+export default class NotionComponent extends Vue {
+	// @Prop({})
+	// private test: number = 0;
+}
+
 </script>
 <style lang="scss">
 .notion {

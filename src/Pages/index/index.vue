@@ -1,17 +1,17 @@
 <template>
   <div class="index">
-    <design-explorer title="index"></design-explorer>
+    <finder title="index"></finder>
   </div>
 </template>
 <script lang="ts">
 import { Vue, Options } from "vue-class-component";
 import { Prop } from "@Components/Decorator/Prop";
 
-import DesignExplorer from "@Components/Design/Explorer/DesignExplorer.vue";
+import IconFinder from "@Components/IconFinder.vue";
 
 @Options({
   components: {
-    "design-explorer": DesignExplorer,
+    "finder": IconFinder,
   },
 })
 export default class IndexComponent extends Vue {

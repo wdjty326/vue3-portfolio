@@ -84,7 +84,7 @@ module.exports = (env, option) => {
 						},
 					],
 				}, {
-					test: /\.jpg$|\.ttf$/,
+					test: /\.jpg$|\.png$|\.ttf$/,
 					loader: "file-loader"
 				}
 			]

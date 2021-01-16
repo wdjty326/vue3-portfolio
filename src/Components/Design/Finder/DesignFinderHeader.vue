@@ -1,5 +1,5 @@
 <template>
-  <div class="design-explorer-header">
+  <div class="design-finder-header">
     <float left></float>
     {{ title }}
   </div>
@@ -15,7 +15,7 @@ import FloatComponent from "@Components/Common/Float.vue";
     float: FloatComponent,
   },
 })
-export default class DesignExplorerHeader extends Vue {
+export default class DesignFinderHeader extends Vue {
   @Prop({
     type: String,
   })
@@ -23,11 +23,15 @@ export default class DesignExplorerHeader extends Vue {
 }
 </script>
 <style lang="scss">
-.design-explorer-header {
+.design-finder .design-finder-header {
   position: relative;
   width: 100%;
-  height: 32px;
-  line-height: 32px;
+  height: 35px;
+  
+  grid-column: 1;
+  grid-row: 1;
+
+  line-height: 35px;
   padding: 0 14px;
   background: linear-gradient(180deg, #e7e7e7 50%, #cacaca);
   border-top-left-radius: 10px;

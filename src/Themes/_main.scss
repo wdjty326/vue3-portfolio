@@ -2,12 +2,8 @@
 	box-sizing: border-box;
 }
 
-@font-face {
-	font-family: "AppleGothic";
-	src: url($AssetRoot + "/applegothic.ttf") format("opentype");
-	font-weight: normal;
-	font-style: normal;
-}
+@import "font";
+@import "sf-symbols.scss";
 
 html, body {
 	position: relative;
@@ -16,7 +12,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 
-	font-family: "AppleGothic", sans-serif;
+	font-family: "SFMono", sans-serif;
+	font-weight: normal;	
+	font-style: normal;
 }
 
 #app {

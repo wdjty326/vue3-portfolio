@@ -35,6 +35,8 @@ const htmlPages = (() => {
 		cache: true,
 		publicPath,
 		inject: false,
+		favicon: "./static/favicon.ico",
+		title: "뷰쟁이 2년차 포트폴리오",
 	}));
 })();
 
@@ -84,8 +86,21 @@ module.exports = (env, option) => {
 						},
 					],
 				}, {
-					test: /\.jpg$|\.png$|\.ttf$/,
-					loader: "file-loader"
+					test: /\.jpg$|\.png$/,
+					loader: "file-loader",
+					options: {
+						name: "[name].[ext]",
+						// outputPath: "../images",
+						// publicPath: "/images"
+					}
+				}, {
+					test: /\.ttf$|\.otf$/,
+					loader: "file-loader",
+					options: {
+						name: "[name].[ext]",
+						// outputPath: "../fonts",
+						// publicPath: "/fonts"
+					},
 				}
 			]
 		},

@@ -18,19 +18,21 @@
           class="design-finder-chevron-button sf-symbols-chevron-right"
         ></button>
       </div>
-      <div class="design-finder-system-buttons">
-        <button
-          class="design-finder-system-button sf-symbols-square-grid-3x2"
-        ></button>
-        <button
-          class="design-finder-system-button sf-symbols-text-justify"
-        ></button>
-        <button
-          class="design-finder-system-button sf-symbols-rectangle-split-3x1"
-        ></button>
-        <button
-          class="design-finder-system-button sf-symbols-squares-below-rectangle"
-        ></button>
+      <div>
+        <div class="design-finder-system-buttons">
+          <button
+            class="design-finder-system-button sf-symbols-square-grid-3x2"
+          ></button>
+          <button
+            class="design-finder-system-button sf-symbols-text-justify"
+          ></button>
+          <button
+            class="design-finder-system-button sf-symbols-rectangle-split-3x1"
+          ></button>
+          <button
+            class="design-finder-system-button sf-symbols-squares-below-rectangle"
+          ></button>
+        </div>
       </div>
     </div>
   </div>
@@ -77,8 +79,11 @@ export default class DesignFinderHeader extends Vue {
   $button-margin: 8px;
 
   > div {
-    text-align: center;
     line-height: 35px;
+
+	&:first-child {
+		text-align: center;
+	}
   }
 
   .design-finder-header-title {
@@ -108,7 +113,7 @@ export default class DesignFinderHeader extends Vue {
 
   .design-finder-chevron-buttons,
   .design-finder-system-buttons {
-    display: flex;
+    display: inline-flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;

@@ -72,7 +72,7 @@ $design-finder-grid-template-columes: 180px 1fr;
   }
 
   .design-finder-header > div:last-child,
-  .design-finder-body >  {
+  .design-finder-body {
 	  display: grid;
 	  grid-template-columns: $design-finder-grid-template-columes;
 	  grid-template-rows: auto;

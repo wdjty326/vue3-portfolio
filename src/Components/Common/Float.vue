@@ -7,17 +7,19 @@ interface FloatProps {
 	center?: string;
 }
 
-const FloatComponent = (props: FloatProps, context: any) => {
-	const { left, right, center } = props;
-	
-	if (right) context.attrs["data-right"] = "";
-	else if (center) context.attrs["data-center"] = "";
-	else context.attrs["data-left"] = "";
+const Float = (props: FloatProps, context: any) => {
+	const { right, center } = props;
+
+	if (right) context.attrs["data-float"] = "right";
+	else if (center) context.attrs["data-float"] = "center";
+	else context.attrs["data-float"] = "left";
+
+	context.attrs["class"] = "float";
 
 	return h("div", context.attrs, context.slots);
 };
 
-FloatComponent.props = {
+Float.props = {
 	left: {
 		type: String,
 		default: undefined,
@@ -32,19 +34,19 @@ FloatComponent.props = {
 	},
 };
 
-export default FloatComponent;
+export default Float;
 </script>
 <style lang="scss">
-div {
-	&[data-left] {
+div.float {
+	&[data-float="left"] {
 		float: left;
 	}
 
-	&[data-right] {
+	&[data-float="right"] {
 		float: right;
 	}
 
-	&[data-center] {
+	&[data-float="center"] {
 		float: center;
 	}
 }

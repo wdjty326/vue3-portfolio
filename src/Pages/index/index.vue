@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <finder title="index"></finder>
+    <finder title="Finder - 뷰쟁이"></finder>
   </div>
 </template>
 <script lang="ts">

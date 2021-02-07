@@ -1,7 +1,7 @@
 <template>
   <div class="design-finder" :data-display="displaySync ? 1 : 0">
     <div>
-      <design-finder-header :title="title" />
+      <design-finder-header :title="title" @close="onClose" />
       <design-finder-body>
         <slot></slot>
       </design-finder-body>
@@ -33,9 +33,15 @@ export default class DesignExplorer extends Vue {
     type: String,
   })
   private title!: string;
+
+  private onClose() {
+	  this.displaySync = false;
+  }
 }
 </script>
 <style lang="scss">
+$design-finder-grid-template-columes: 180px 1fr;
+
 .design-finder {
   position: fixed;
   width: 100%;
@@ -59,10 +65,27 @@ export default class DesignExplorer extends Vue {
   > div {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 35px 1fr;
+    grid-template-rows: 70px 1fr;
 
-    min-width: 320px;
+    min-width: 640px;
     min-height: 568px;
+  }
+
+  .design-finder-header > div:last-child,
+  .design-finder-body >  {
+	  display: grid;
+	  grid-template-columns: $design-finder-grid-template-columes;
+	  grid-template-rows: auto;
+
+	  > *:nth-child(1) {
+		  grid-column: 1;
+		  grid-row: 1;
+	  }
+
+	  > *:nth-child(2) {
+		  grid-column: 2;
+		  grid-row: 1;
+	  }
   }
 }
 </style>

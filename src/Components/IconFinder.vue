@@ -31,8 +31,10 @@ export default class IconFinder extends Vue {
 </script>
 <style lang="scss">
 #icon-finder {
+  display: inline-block;
+
   > .icon-finder {
-    display: inline-block;
+    display: block;
     width: 48px;
     height: 48px;
     background-image: url($AssetRoot + "/icon_finder.png");
@@ -40,7 +42,7 @@ export default class IconFinder extends Vue {
     background-repeat: no-repeat;
     background-position: 50%;
 
-	cursor: pointer;
+    cursor: pointer;
   }
 }
 </style>

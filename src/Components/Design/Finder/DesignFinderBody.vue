@@ -1,6 +1,9 @@
 <template>
 	<div class="design-finder-body">
-		<slot></slot>
+		<design-accordion></design-accordion>
+		<div class="design-finder-content">
+			<slot></slot>
+		</div>
 	</div>
 </template>
 <script lang="ts">

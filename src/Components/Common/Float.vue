@@ -8,10 +8,8 @@ interface FloatProps {
 }
 
 const Float = (props: FloatProps, context: any) => {
-	const { right, center } = props;
-
-	if (right) context.attrs["data-float"] = "right";
-	else if (center) context.attrs["data-float"] = "center";
+	if ("right" in props) context.attrs["data-float"] = "right";
+	else if ("center" in props) context.attrs["data-float"] = "center";
 	else context.attrs["data-float"] = "left";
 
 	context.attrs["class"] = "float";
@@ -22,15 +20,12 @@ const Float = (props: FloatProps, context: any) => {
 Float.props = {
 	left: {
 		type: String,
-		default: undefined,
 	},
 	right: {
 		type: String,
-		default: undefined,
 	},
 	center: {
 		type: String,
-		default: undefined,
 	},
 };
 

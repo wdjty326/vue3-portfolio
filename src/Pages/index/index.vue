@@ -1,13 +1,17 @@
 <template>
   <div class="index">
-    <finder title="Finder - 뷰쟁이"></finder>
+	  <design-toolbar />
+    <div>
+		<finder title="Finder - 뷰쟁이"></finder>
+	</div>
+	<design-shortcuts />
   </div>
 </template>
 <script lang="ts">
 import { Vue, Options } from "vue-class-component";
 import { Prop } from "@Components/Decorator/Prop";
 
-import IconFinder from "@Components/IconFinder.vue";
+import IconFinder from "@Components/Icon/IconFinder.vue";
 
 @Options({
   components: {
@@ -21,6 +25,8 @@ export default class IndexComponent extends Vue {
 </script>
 <style lang="scss">
 .index {
+	@include grid-window;
+
   width: 100%;
   height: 100%;
 

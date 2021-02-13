@@ -9,7 +9,7 @@
       <span class="design-finder-header-title">{{ title }}</span>
       <clearfix />
     </div>
-    <div>
+    <div class="design-finder-toolbar">
       <div class="design-finder-chevron-buttons">
         <button
           class="design-finder-chevron-button sf-symbols-chevron-left"
@@ -101,6 +101,7 @@ export default class DesignFinderHeader extends Vue {
     background-position: 50%;
 
     cursor: pointer;
+	outline: none;
   }
   .design-finder-chevron-button {
     background-size: 11px auto;

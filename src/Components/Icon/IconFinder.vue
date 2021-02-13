@@ -1,7 +1,8 @@
 <template>
-  <div id="icon-finder">
-    <span class="icon-finder" @dblclick="display = !display" />
-    <design-finder
+  <div id="icon-finder" class="icon">
+    <span class="icon-img" @dblclick="display = !display" />
+    <span class="icon-title">{{title}}</span>
+	<design-finder
       :title="title"
       :display="display"
       @update:display="($val) => (display = $val)"
@@ -30,19 +31,14 @@ export default class IconFinder extends Vue {
 }
 </script>
 <style lang="scss">
-#icon-finder {
-  display: inline-block;
+@import "icon";
 
-  > .icon-finder {
-    display: block;
-    width: 48px;
-    height: 48px;
+#icon-finder {
+  > .icon-img {
     background-image: url($AssetRoot + "/icon_finder.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 50%;
-
-    cursor: pointer;
   }
 }
 </style>

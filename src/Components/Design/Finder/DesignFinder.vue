@@ -35,7 +35,7 @@ export default class DesignExplorer extends Vue {
   private title!: string;
 
   private onClose() {
-	  this.displaySync = false;
+    this.displaySync = false;
   }
 }
 </script>
@@ -46,7 +46,8 @@ $design-finder-grid-template-columes: 180px 1fr;
   position: fixed;
   width: 100%;
   height: 100%;
-
+  left: 0;
+  top: 0;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -73,19 +74,19 @@ $design-finder-grid-template-columes: 180px 1fr;
 
   .design-finder-header > div:last-child,
   .design-finder-body {
-	  display: grid;
-	  grid-template-columns: $design-finder-grid-template-columes;
-	  grid-template-rows: auto;
+    display: grid;
+    grid-template-columns: $design-finder-grid-template-columes;
+    grid-template-rows: auto;
 
-	  > *:nth-child(1) {
-		  grid-column: 1;
-		  grid-row: 1;
-	  }
+    > *:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
 
-	  > *:nth-child(2) {
-		  grid-column: 2;
-		  grid-row: 1;
-	  }
+    > *:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
   }
 }
 </style>

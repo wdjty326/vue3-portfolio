@@ -3,7 +3,13 @@
 }
 
 @import "font";
-@import "sf-symbols.scss";
+@import "sf-symbols";
+
+@mixin grid-window {
+	display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 24px 1fr 64px;
+}
 
 html, body {
 	position: relative;

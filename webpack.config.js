@@ -2,6 +2,8 @@ const glob = require("glob");
 const path = require("path");
 const fs = require("fs");
 
+// const {  } = require("webpack");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
@@ -86,7 +88,7 @@ module.exports = (env, option) => {
 						},
 					],
 				}, {
-					test: /\.jpg$|\.png$/,
+					test: /\.jpg$|\.png$|\.svg$/,
 					loader: "file-loader",
 					options: {
 						name: "[name].[ext]",
